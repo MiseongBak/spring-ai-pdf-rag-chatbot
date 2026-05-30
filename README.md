@@ -64,6 +64,7 @@ Retrieved Context
 OpenAI LLM
    ↓
 Generated Answer
+```
 
 ---
 
