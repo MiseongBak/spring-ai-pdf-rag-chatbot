@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{base-layout::layout(~{::section})}">
+<body>
+
+<section class="container">
+
+    <h1>PDF AI 챗봇</h1>
+
+    <form th:action="@{/rag/upload}"
+          method="post"
+          enctype="multipart/form-data">
+
+        <div class="mb-3">
+            <label class="form-label">PDF 업로드</label>
+            <input type="file"
+                   name="file"
+                   class="form-control">
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary">
+            업로드
+        </button>
+
+    </form>
+
+    <hr>
+
+    <form th:action="@{/rag/question}"
+          method="post">
+
+        <div class="mb-3">
+            <label class="form-label">질문</label>
+            <input type="text"
+                   name="question"
+                   class="form-control"
+                   placeholder="질문 입력">
+        </div>
+
+        <button type="submit"
+                class="btn btn-success">
+            질문하기
+        </button>
+
+    </form>
+
+    <div th:if="${message}" class="alert alert-success mt-3">
+        <span th:text="${message}"></span>
+    </div>
+
+    <div th:if="${answer}" class="card mt-3">
+        <div class="card-header">
+            AI 답변
+        </div>
+        <div class="card-body">
+            <p th:text="${answer}"></p>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
