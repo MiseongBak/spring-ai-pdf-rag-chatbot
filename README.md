@@ -46,39 +46,24 @@ Spring AI와 OpenAI API, Qdrant Vector Database를 활용하여 PDF 문서 기�
 
 ## 시스템 아키텍처
 
+```text
 PDF Upload
-
-↓
-
+   ↓
 PDF Chunking
-
-↓
-
+   ↓
 OpenAI Embedding
-
-↓
-
-Qdrant Vector Store 저장
-
-↓
-
-사용자 질문
-
-↓
-
+   ↓
+Qdrant Vector Store
+   ↓
+User Question
+   ↓
 Similarity Search
-
-↓
-
-관련 문서 검색
-
-↓
-
+   ↓
+Retrieved Context
+   ↓
 OpenAI LLM
-
-↓
-
-답변 생성
+   ↓
+Generated Answer
 
 ---
 
