@@ -103,6 +103,48 @@ OpenAI LLM
 
 ---
 
+## 실행 화면
+
+### PDF 문서 업로드
+
+사용자는 PDF 문서를 업로드하여 벡터 데이터로 변환할 수 있습니다.
+
+![PDF Upload](docs/images/pdf-upload.png)
+
+---
+
+### 사용자 질문 입력
+
+업로드된 문서에 대해 자연어 질문을 입력할 수 있습니다.
+
+![Question Input](docs/images/question-input.png)
+
+---
+
+### AI 기반 문서 질의응답
+
+사용자 질문에 대해 Vector Search와 OpenAI LLM을 활용하여 문서 기반 답변을 생성합니다.
+
+![AI Answer](docs/images/ai-answer.png)
+
+---
+
+### Qdrant Vector Database
+
+PDF 문서 임베딩 데이터가 Qdrant Vector Store에 저장됩니다.
+
+![Qdrant Collection](docs/images/qdrant-collection.png)
+
+---
+
+### Docker 기반 실행 환경
+
+Qdrant Vector Database를 Docker 컨테이너 환경에서 운영합니다.
+
+![Docker Qdrant](docs/images/docker-qdrant.png)
+
+---
+
 ## 실행 방법
 
 ### Qdrant 실행
@@ -127,10 +169,12 @@ OPENAI_API_KEY=YOUR_API_KEY
 
 ## 프로젝트 결과
 
-* PDF 문서 기반 RAG 챗봇 구현
-* Spring AI와 Qdrant 연동
-* OpenAI Embedding 기반 Vector Search 구현
-* PDF 질의응답 서비스 구현
+* Spring AI 기반 PDF RAG 챗봇 구현
+* OpenAI Embedding을 활용한 문서 벡터화 구현
+* Qdrant Vector Database 연동 및 Similarity Search 구현
+* PDF 문서 기반 자연어 질의응답 서비스 구현
+* Docker 기반 Vector DB 실행 환경 구축
+* Spring Boot + AI 서비스 통합 백엔드 개발 경험 확보
 
 ---
 
